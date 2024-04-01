@@ -1,0 +1,239 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body styles */
+body {
+  background-color: #e3f2fd; /* Light blue background */
+  color: #333; /* Default text color */
+}
+
+/* For Scrollbar */
+/* Common styles for both modes */
+:root {
+  --scrollbar-track: #f2f2f2;
+  --scrollbar-thumb: #ccc;
+  --scrollbar-thumb-hover: #aaa;
+  --background-color: #fff;
+  --text-color: #333;
+}
+
+/* Dark mode */
+
+/* Dark mode */
+body.dark-mode {
+  background-color: #111; /* Dark background */
+  color: #ddd; /* White text color */
+}
+
+/* Adjusting main content background */
+
+/* Adjusting blue and white glowing borders */
+
+
+
+/* Adjusting text color */
+
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: var(--scrollbar-thumb);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+.sidebar {
+  width: 300px; /* Width of the sidebar */
+  background-color: #333; /* Dark background for sidebar */
+  color: #fff; /* White text color */
+  padding: 25px; /* Add padding for content */
+}
+
+.container {
+  
+    background-color: #333; /* Dark greyish background for main content */
+  
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 25px;
+  margin: 85px auto 0;
+  /* background-color: var(--background-color); Using variable for background color */
+  box-shadow: 0 5px 10px rgba(120, 120, 120, 0.1);
+}
+.container .input-field {
+  position: relative;
+  height: 64px;
+  width: 100%;
+}
+.input-field textarea {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 8px;
+  padding: 18px 45px 18px 15px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+.input-field textarea:focus {
+  border-color: #4070f4;
+}
+textarea::-webkit-scrollbar {
+  display: none;
+}
+.input-field .note-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 24px;
+  color: #707070;
+}
+/* .input-field textarea:focus ~ .note-icon {
+  color: #4070f4;
+} */
+.input-field textarea:focus ~ .note-icon {
+  color: #4070f4; /* Blue note icon for focused textarea */
+}
+
+.container .todoLists {
+  max-height: 380px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+ .todoLists .list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  background-color: #f2f2f2;
+  padding: 20px 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  position: relative;
+  cursor: pointer;
+/* } 
+.todoLists .list { */
+  background-color: #222; /* Dark grey background for todo list items */
+  color: #fff; /* White text color for todo list items */
+}
+
+.todoLists .list input {
+  height: 16px;
+  min-width: 16px;
+  accent-color: #4070f4;
+  pointer-events: none;
+}
+.todoLists .list .task {
+  margin: 0 30px 0 15px;
+  word-break: break-all;
+}
+.list input:checked ~ .task {
+  text-decoration: line-through;
+}
+.todoLists .list i {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #707070;
+  padding: 5px;
+  opacity: 0.6;
+  display: none;
+}
+.todoLists .list:hover i {
+  display: inline-flex;
+}
+.todoLists .list i:hover {
+  opacity: 1;
+}
+.container .pending-tasks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+.pending-tasks span {
+  color: #f1ecec; 
+} 
+.pending-tasks .clear-button {
+  padding: 6px 12px;
+  outline: none;
+  border: none;
+  background: #4070f4;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.clear-button:hover {
+  background-color: #0e4bf1;
+}
+@media screen and (max-width: 350px) {
+  .container {
+    padding: 25px 10px;
+  }
+}
+
+/* Toggle button */
+/* Paste your existing CSS code here */
+
+/* Toggle button */
+/* Add custom styles for the dark mode toggle button */
+/* Toggle button */
+/* Dark mode */
+/* Toggle button */
+.mode-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #fff; /* Default background color */
+  color: #333; /* Default text color */
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 999; /* Ensure it's above other content */
+}
+
+/* Moon icon for dark mode */
+.mode-toggle-btn[data-theme='dark'] {
+  background-color: #333; /* Dark mode button background color */
+  color: #fff; /* Dark mode text color */
+}
+
+/* Sun icon for light mode */
+.mode-toggle-btn[data-theme='light'] {
+  background-color: #fff; /* Light mode button background color */
+  color: #333; /* Light mode text color */
+}
+
+/* Icon inside the toggle button */
+.mode-toggle-btn i {
+  font-size: 24px;
+}
