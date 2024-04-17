@@ -33,8 +33,8 @@ inputField.addEventListener("keyup", (e) => {
           <i class="uil uil-trash" onclick="deleteTask(this)"></i>
         </li>`;
 
-    todoLists.insertAdjacentHTML("beforeend", liTag); // Inserting li tag inside the todoLists div
-    inputField.value = ""; // Removing value from input field
+    todoLists.insertAdjacentHTML("beforeend", liTag); 
+    inputField.value = ""; 
     allTasks();
   }
 });
