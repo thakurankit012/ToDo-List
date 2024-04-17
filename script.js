@@ -22,11 +22,10 @@ function allTasks() {
   clearButton.style.pointerEvents = "none";
 }
 
-// Add task while we put value in text area and press enter
 inputField.addEventListener("keyup", (e) => {
-  let inputVal = inputField.value.trim(); // Trim function removes space of front and back of the inputted value
+  let inputVal = inputField.value.trim(); 
 
-  // If enter button is clicked and inputted value length is greater than 0.
+ 
   if (e.key === "Enter" && inputVal.length > 0) {
     let liTag = ` <li class="list pending" onclick="handleStatus(this)">
           <input type="checkbox" />
