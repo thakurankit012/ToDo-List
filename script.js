@@ -39,7 +39,6 @@ inputField.addEventListener("keyup", (e) => {
   }
 });
 
-// Checking and unchecking the checkbox while we click on the task
 function handleStatus(e) {
   const checkbox = e.querySelector("input"); // Getting checkbox
   checkbox.checked = checkbox.checked ? false : true;
@@ -47,13 +46,13 @@ function handleStatus(e) {
   allTasks();
 }
 
-// Deleting task while we click on the delete icon.
+
 function deleteTask(e) {
-  e.parentElement.remove(); // Getting parent element and remove it
+  e.parentElement.remove(); 
   allTasks();
 }
 
-// Deleting all the tasks while we click on the clear button.
+
 clearButton.addEventListener("click", () => {
   todoLists.innerHTML = "";
   allTasks();
