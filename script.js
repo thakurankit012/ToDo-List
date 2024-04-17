@@ -3,16 +3,13 @@ const inputField = document.querySelector(".input-field textarea"),
   pendingNum = document.querySelector(".pending-num"),
   clearButton = document.querySelector(".clear-button");
 
-// Toggle dark/light mode
 function toggleMode() {
   document.body.classList.toggle("dark-mode");
 }
 
-// We will call this function while adding, deleting and checking-unchecking the task
 function allTasks() {
   let tasks = document.querySelectorAll(".pending");
 
-  // If tasks' length is 0 then pending num text content will be no, if not then pending num value will be task's length
   pendingNum.textContent = tasks.length === 0 ? "no" : tasks.length;
 
   let allLists = document.querySelectorAll(".list");
